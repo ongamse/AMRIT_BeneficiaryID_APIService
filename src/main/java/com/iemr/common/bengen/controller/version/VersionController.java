@@ -1,5 +1,5 @@
 /*
-* AMRIT – Accessible Medical Records via Integrated Technology
+* AMRIT ï¿½ Accessible Medical Records via Integrated Technology
 * Integrated EHR (Electronic Health Records) Solution
 *
 * Copyright (C) "Piramal Swasthya Management and Research Institute"
@@ -35,11 +35,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.iemr.common.bengen.utils.response.OutputResponse;
 
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 public class VersionController {
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass().getSimpleName());
 	
+	@ApiOperation(value = "Version Information")
 	@CrossOrigin()
 	@RequestMapping(value = "/version", method = { RequestMethod.GET })
 	public String versionInformation() {
