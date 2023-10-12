@@ -1,5 +1,5 @@
 /*
-* AMRIT – Accessible Medical Records via Integrated Technology
+* AMRIT ï¿½ Accessible Medical Records via Integrated Technology
 * Integrated EHR (Electronic Health Records) Solution
 *
 * Copyright (C) "Piramal Swasthya Management and Research Institute"
@@ -42,6 +42,7 @@ import com.iemr.common.bengen.utils.OutputResponse;
 import com.iemr.common.bengen.utils.mapper.InputMapper;
 import com.iemr.common.bengen.utils.mapper.OutputMapper;
 
+import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 
 @RequestMapping("/generateBeneficiaryController")
@@ -53,6 +54,7 @@ public class GenerateBeneficiaryController {
 	@Autowired
 	GenerateBeneficiaryService generateBeneficiaryService;
 	
+	@ApiOperation(value = "Generate beneficiary Ids")
 	@CrossOrigin()
 	@RequestMapping(value = "/generateBeneficiaryIDs", headers = "Authorization", method = {
 			RequestMethod.POST }, produces = { "application/json" })
